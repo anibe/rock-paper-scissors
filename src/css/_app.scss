@@ -1,0 +1,15 @@
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  background: $grey;
+}
+
+.canvas {
+  width: 80%;
+  margin: 20px auto;
+  padding: $spacing_default;
+  background: $white;
+
+  .main-title {
+    display: inline;
+  }
+}

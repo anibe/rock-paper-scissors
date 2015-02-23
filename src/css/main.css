@@ -1,0 +1,21 @@
+/* Colours */
+/* Layout and sizes */
+/* line 1, _app.scss */
+body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  background: #ececec;
+}
+
+/* line 6, _app.scss */
+.canvas {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+}
+/* line 12, _app.scss */
+.canvas .main-title {
+  display: inline;
+}
+
+/*# sourceMappingURL=main.css.map */
