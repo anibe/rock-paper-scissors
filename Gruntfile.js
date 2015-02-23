@@ -120,7 +120,6 @@ module.exports = function ( grunt ) {
     grunt.registerTask( 'dev', [
         'clean',
         'default',
-        //'connect',
         'watch'
     ] );
 
