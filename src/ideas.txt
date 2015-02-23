@@ -1,0 +1,33 @@
+
+key functions
+---------------
+
+* tool
+- tool name
+- tool power
+- tool image
+
+* players
+- player name
+-player type
+- score
+
+* engine
+- randomly output a tool
+- compare the tools of all players and rank based on tool power
+- highest tool power wins round
+
+* rounds
+- player id
+- score
+
+* highscore
+
+
+flow
+-----
+
+- run define tools
+- declare players
+- run randomiser in game engine
+- get player with higest score and update score
