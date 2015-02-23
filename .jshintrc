@@ -14,7 +14,14 @@
     "curly":true,
     "strict": true,
     "expr":true,
-    "globals": {
-    
+    "globals"   : {
+        /* Jasmine */
+        "describe"   : false,
+        "expect": false,
+        "it"         : false,
+        "before"     : false,
+        "beforeEach" : false,
+        "after"      : false,
+        "afterEach"  : false
     }
 }

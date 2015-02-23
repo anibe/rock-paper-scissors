@@ -3,3 +3,4 @@ node_modules/
 *.doc
 *.doc#
 .idea/
+.grunt/

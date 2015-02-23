@@ -63,6 +63,26 @@ module.exports = function ( grunt ) {
             }
         },
 
+        sass: {
+            expanded: {
+                options: {
+                    style: 'expanded',
+                    lineNumbers: true
+                },
+                files: {
+                    'src/css/main.css': 'src/css/main.scss'
+                }
+            },
+            compressed: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'src/css/main.css': 'src/css/main.scss'
+                }
+            }
+        },
+
         watch: {
             options: {
                 spawn: false,
@@ -99,14 +119,14 @@ module.exports = function ( grunt ) {
     // Dev
     grunt.registerTask( 'dev', [
         'clean',
-        'sass:compressed',
         'default',
-        'test',
-        'connect',
+        //'connect',
         'watch'
-
     ] );
 
-
+    // connect
+    grunt.registerTask( 'start', [
+        'connect'
+    ] );
 
 };
