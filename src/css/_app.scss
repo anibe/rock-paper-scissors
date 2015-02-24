@@ -3,6 +3,16 @@ body {
   background: $grey;
 }
 
+.group:after { /* A more 'semantic' clearfix solution */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 .canvas {
   width: 80%;
   margin: 20px auto;
@@ -11,5 +21,71 @@ body {
 
   .main-title {
     display: inline;
+  }
+
+  .player-area {
+
+    position: relative;
+    min-height: $canvas_height;
+
+    .player {
+      width: 50%;
+      float: left;
+    }
+
+    .mask {
+      position: absolute;
+      background: rgba(255,255,255,0.7);
+      height: $canvas_height;
+      text-align: center;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .computer {
+      opacity: 0.3;
+    }
+
+  }
+}
+
+.shape-choices {
+  ul, li {
+    list-style: none;
+    padding: 0;
+  }
+
+  li.shape0 a { // Rock
+    background-position: -240px 50%;
+  }
+
+  li.shape1 a { // Paper
+    background-position: 0 50%;
+  }
+
+  li.shape2 a { // Scissors
+    background-position: -124px 0;
+  }
+
+  a {
+    display: block;
+    border: 4px solid transparent;
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    background: url(../img/game-sprite-001.jpg) no-repeat 0 0;
+    text-indent: -9999em;
+    margin: 0 0 10px;
+
+    &:hover {
+      border-color: $grey;
+      box-shadow: #cacaca 0px 2px 2px;
+    }
+
+    &:active,
+    &.selected {
+      border-color: $green;
+    }
   }
 }

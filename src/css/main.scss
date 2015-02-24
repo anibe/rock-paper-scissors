@@ -1,5 +1,7 @@
-//@import 'reset'; // Uses normalize
+@import 'reset'; // Uses normalize. Too many csslint issues so diabling for now
 
 @import 'variables';
+
+@import 'forms';
 
 @import "app";

@@ -10,35 +10,59 @@
     <body>
 
         <div id="canvas" class="canvas" data-vscomputer="true" >
-            <h1 class="main-title">Welcome</h1>
-            <button class="start-game">Start game</button>
+            <h1 class="main-title">Rock Paper Scissors!</h1>
 
-            <div class="player player-1">
-                <div>Player 1 Name</div>
-                <div class="chosen-shape">
-                    <span></span>
-                </div>
-                <div class="shape-choices">
-                    <ul>
-                        <li class="shape0"><a data-shapeid="0" href="#">shape name 1: rock</a></li>
-                        <li class="shape1"><a data-shapeid="1" href="#">shape name 2: paper</a></li>
-                        <li class="shape2"><a data-shapeid="2" href="#">shape name 3: scissors</a></li>
-                    </ul>
-                </div>
+            <div class="game-modes">
+                <fieldset>
+                    <!--<label>-->
+                        <!--Human vs Human-->
+                        <!--<input type="radio" name="mode" value="1">-->
+                    <!--</label>-->
+                    <label>
+                        Human vs Computer
+                        <input type="radio" name="mode" value="2" checked>
+                    </label>
+                    <label>
+                        Computer vs Computer
+                        <input type="radio" name="mode" value="3">
+                    </label>
+                </fieldset>
+                <button class="btn btn-primary" id="new-game">Start game</button>
             </div>
 
 
-            <div class="player player-2">
-                <div>Player 2 Name</div>
-                <div class="chosen-shape">
-                    <span></span>
+            <div class="player-area group">
+                <div class="player player1 hidden" data-playerid="player1">
+                    <div class="player-name">Player 1 <span></span></div>
+                    <div class="chosen-shape">
+                        <span></span>
+                    </div>
+                    <div class="shape-choices">
+                        <ul>
+                            <li class="shape0"><a data-shapeid="0" href="#">shape name 1: rock</a></li>
+                            <li class="shape1"><a data-shapeid="1" href="#">shape name 2: paper</a></li>
+                            <li class="shape2"><a data-shapeid="2" href="#">shape name 3: scissors</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="shape-choices">
-                    <ul>
-                        <li class="shape0"><a data-shapeid="0" href="#">shape name 1: rock</a></li>
-                        <li class="shape1"><a data-shapeid="1" href="#">shape name 2: paper</a></li>
-                        <li class="shape2"><a data-shapeid="2" href="#">shape name 3: scissors</a></li>
-                    </ul>
+                <div class="player player2 computer hidden" data-playerid="player2">
+                    <div class="player-name">Player 2 <span></span></div>
+                    <div class="chosen-shape">
+                        <span></span>
+                    </div>
+                    <div class="shape-choices">
+                        <ul>
+                            <li class="shape0"><a tabindex="-1" data-shapeid="0" href="#">shape name 1: rock</a></li>
+                            <li class="shape1"><a tabindex="-1" data-shapeid="1" href="#">shape name 2: paper</a></li>
+                            <li class="shape2"><a tabindex="-1" data-shapeid="2" href="#">shape name 3: scissors</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="message-box" class="mask hidden">
+                    <h2 class="msg"></h2>
+                    <div class="img"></div>
+                    <button class="close" id="proceed" >OK</button>
                 </div>
             </div>
         </div>
