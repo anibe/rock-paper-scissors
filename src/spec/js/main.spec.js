@@ -5,7 +5,7 @@ describe("Rock Paper Scissors game", function() {
         expect(true).toBe(true);
     });
 
-    it("should have each shape assigned a 'strength' value ", function() {
+    it("should have each shape assigned a 'beatsIndex' value ", function() {
         expect(true).toBe(true);
     });
 
