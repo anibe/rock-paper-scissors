@@ -12,13 +12,14 @@
     "unused": true,
     "maxlen": 120,
     "curly":true,
-    "strict": true,
+    "strict": false,
     "expr":true,
     "globals"   : {
         /* Jasmine */
         "describe"   : false,
         "expect": false,
         "it"         : false,
+        "xit"         : false,
         "before"     : false,
         "beforeEach" : false,
         "after"      : false,

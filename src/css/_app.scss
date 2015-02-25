@@ -35,6 +35,7 @@ body {
 
     .mask {
       position: absolute;
+      background: $white;
       background: rgba(255,255,255,0.7);
       height: $canvas_height;
       text-align: center;
@@ -56,15 +57,15 @@ body {
     padding: 0;
   }
 
-  li.shape0 a { // Rock
+  .shape0 a { // Rock
     background-position: -240px 50%;
   }
 
-  li.shape1 a { // Paper
+  .shape1 a { // Paper
     background-position: 0 50%;
   }
 
-  li.shape2 a { // Scissors
+  .shape2 a { // Scissors
     background-position: -124px 0;
   }
 
@@ -75,17 +76,19 @@ body {
     height: 150px;
     padding: 10px;
     background: url(../img/game-sprite-001.jpg) no-repeat 0 0;
-    text-indent: -9999em;
-    margin: 0 0 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;
 
     &:hover {
       border-color: $grey;
-      box-shadow: #cacaca 0px 2px 2px;
+      box-shadow: #cacaca 1px 2px 2px;
     }
 
-    &:active,
-    &.selected {
-      border-color: $green;
-    }
+  }
+
+  .selected {
+    border-color: $green;
   }
 }

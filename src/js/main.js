@@ -195,7 +195,7 @@ var RockPaperSci = {
             $msgBox = this.canvas.find('#message-box'),
             that = this;
 
-        if (this.canvas.length > 0) {
+//        if (this.canvas.length > 0) {
 
             this.setWinRule(0,2);
             this.setWinRule(1,0);
@@ -229,9 +229,16 @@ var RockPaperSci = {
                $msgBox.addClass('hidden');
                that.canvas.find('.player').addClass('hidden');
             });
-
-        } else {
-            throw 'Error starting new game';
-        }
+//
+//        } else {
+//            throw 'Error starting new game';
+//        }
     }
-}
+};
+
+(function () {
+    'use strict';
+
+    RockPaperSci.init();
+
+})();
